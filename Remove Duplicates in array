@@ -1,0 +1,16 @@
+class Solution {
+  public:
+    vector<int> removeDuplicate(vector<int>& arr) {
+        // code here
+        
+        int dupcheck[101]={0};
+        vector<int> result;
+        for(int i=0;i<arr.size();i++){
+            if(dupcheck[arr[i]]==0){
+                result.push_back(arr[i]);
+                dupcheck[arr[i]]=+1;
+            }
+        }
+        return result;
+    }
+};
